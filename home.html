@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles.css">
+    <title>Modern Shopping Page</title>
+    <link rel="stylesheet" href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css">
+    <link rel="stylesheet" href="assets/css/home.css">
+</head>
+
+<body>
+    <div class="container">
+        <aside class="sidebar">
+            <div class="profile">
+                <img src="https://via.placeholder.com/100" alt="Profile" class="profile-img">
+                <h2>Username</h2>
+            </div>
+            <nav class="nav">
+                <ul>
+                    <li><a href="#"><i class='bx bx-home'></i> Home</a></li>
+                    <li><a href="#"><i class='bx bx-package'></i> Products</a></li>
+                    <li><a href="#"><i class='bx bx-list-ul'></i> Orders</a></li>
+                    <li><a href="#"><i class='bx bx-cart'></i> Cart</a></li>
+                    <li><a href="#"><i class='bx bx-log-out'></i> Logout</a></li>
+                </ul>
+            </nav>
+        </aside>
+
+
+        </aside>
+
+        <main class="main-content">
+            <header class="header">
+                <h1>Dye Net Store</h1>
+                <div class="cart">
+                    <button onclick="alert('Cart functionality is not implemented')">🛒 Cart (0)</button>
+                </div>
+            </header>
+
+            <section class="product-list">
+                <div class="product">
+                    <img src="assets/istockphoto-1.jpg" alt="Product 1">
+                    <h2>Product 1</h2>
+                    <p>$10.00</p>
+                    <button>Add to Cart</button>
+                </div>
+                <div class="product">
+                    <img src="assets/istockphoto-2.jpg" alt="Product 2">
+                    <h2>Product 2</h2>
+                    <p>$20.00</p>
+                    <button>Add to Cart</button>
+                </div>
+                <div class="product">
+                    <img src="assets/istockphoto-3.jpg" alt="Product 3">
+                    <h2>Product 3</h2>
+                    <p>$30.00</p>
+                    <button>Add to Cart</button>
+                </div>
+                <div class="product">
+                    <img src="assets/istockphoto-4.jpg" alt="Product 3">
+                    <h2>Product 3</h2>
+                    <p>$30.00</p>
+                    <button>Add to Cart</button>
+                </div>
+                <div class="product">
+                    <img src="assets/istockphoto-5.jpg" alt="Product 3">
+                    <h2>Product 3</h2>
+                    <p>$30.00</p>
+                    <button>Add to Cart</button>
+                </div>
+                <div class="product">
+                    <img src="assets/istockphoto-6.jpg" alt="Product 3">
+                    <h2>Product 3</h2>
+                    <p>$30.00</p>
+                    <button>Add to Cart</button>
+                </div>
+                <div class="product">
+                    <img src="assets/istockphoto-4.jpg" alt="Product 3">
+                    <h2>Product 3</h2>
+                    <p>$30.00</p>
+                    <button>Add to Cart</button>
+                </div>
+                <div class="product">
+                    <img src="assets/istockphoto-1.jpg" alt="Product 4">
+                    <h2>Product 4</h2>
+                    <p>$40.00</p>
+                    <button>Add to Cart</button>
+                </div>
+            </section>
+        </main>
+    </div>
+
+    <footer>
+        <p>&copy; 2023 Dye Net. All rights reserved.</p>
+    </footer>
+    <script>
+        let cartCount = 0;
+
+        const addToCartButtons = document.querySelectorAll('.product button');
+        addToCartButtons.forEach(button => {
+            button.addEventListener('click', () => {
+                cartCount++;
+                alert('Item added to cart!');
+                document.querySelector('.cart button').innerText = `🛒 Cart (${cartCount})`;
+            });
+        });
+    </script>
+</body>
+
+</html>

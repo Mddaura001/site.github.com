@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Centered Box</title>
+    <link rel="stylesheet" href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css">
+    <link rel="stylesheet" href="assets/css/option.css">
+   
+</head>
+
+<body>
+    <div>
+        <button id="loginbtn" class="btn"
+            style="background-color: rgb(255, 255, 255); border: 0.5px solid grey; position: fixed; top: 10%; left: 80%; color: #333333; "
+            type="button">Login</button>
+    </div>
+    <div class="box">
+        <div class="heading01">
+            <span class="span01">Choose an option below to continue</span>
+        </div>
+        <div class="auth">
+            <div class="authbtn" id="google">
+                <i class="bx bxl-google"></i>
+                Sign Up Using Google
+            </div>
+            <div class="authbtn" id="github">
+                <i class="bx bxl-github"></i>
+                Sign Up Using Github
+            </div>
+        </div>
+        <div class="button01">
+            <button id="signbtn" class="btn">Signup</button>
+            <button id="guessbtn" class="btn">Guest</button>
+        </div>
+    </div>
+
+    <div id="modal">
+        <div class="main-modal">
+            <div class="modal-head">Server Error</div>
+            <div class="modal-note">Error: Google Authentication is currently unavailable. Please try again</div>
+            <div class="modal-btn">
+                <button type="button" id="modalbtn">close</button>
+            </div>
+        </div>
+    </div>
+    <script>
+        const loginbtn = document.getElementById("loginbtn");
+        const signbtn = document.getElementById("signbtn");
+        const guessbtn = document.getElementById("guessbtn");
+        const google = document.getElementById("google");
+        const github = document.getElementById("github");
+        var modal = document.getElementById('modal');
+
+        if (loginbtn) {
+            loginbtn.addEventListener("click", () => {
+                window.location.href = "login.html";
+            });
+        }
+
+        if (signbtn) {
+            signbtn.addEventListener("click", () => {
+                window.location.href = "signup.html";
+            });
+        }
+
+        if (guessbtn) {
+            guessbtn.addEventListener("click", () => {
+                guessbtn.style.backgroundColor = "#fff";
+                window.location.href = "home.html";
+            });
+        }
+        if (google) {
+            google.addEventListener("click", () => {
+                modal.style.display = 'flex';
+            })
+        }
+        if (github) {
+            github.addEventListener("click", () => {
+                modal.style.display = 'flex';
+            })
+        }
+        document.getElementById('modalbtn').addEventListener('click', () => {
+            modal.style.display = 'none';
+        });
+    </script>
+</body>
+
+</html>
